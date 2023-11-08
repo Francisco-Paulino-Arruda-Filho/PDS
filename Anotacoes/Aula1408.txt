@@ -1,0 +1,34 @@
+GRASP
+Padrões que descobrem o que cada classe faz. 
+Padrão
+	-Quando algo é solucionado de forma eficiente da mesma forma por varias pessoas;
+	-Boa solução encontrada por várias pessoas;
+	-Escolher qual padrão;
+GRASP - Criador
+	-Quando dar new em uma classe?
+	-Quando uma classe é responsável por contra. Exemplo: Repositorio livro, new Livro;
+	-Quando uma classe precisa dos métodos, serviços, de uma classe;
+	-Quando uma classe tem os dados da outra.(Acoplamento), Postagem dá new em comentário;
+GRASP - Especialista em informação
+	-Evitar chamadas excessivas, chamadas muito longas. Tentar buscar por parâmetro e evitar deixar muito distante;
+	-Evitar longas chamadas;
+	-Ajuda a encontrar algo que está errado;
+	-Evitar set, pois é atributo de outra classe. Melhor evitar, não é bom alterar atributo de outra classe;
+GRASP - Polimorfismo(Só usar quando algo é um tipo especial e não é um papel):
+	-Usar interfaces(Não herda comportamento, apenas assinatura);
+	-Evitar polimorfismo direta(Herda dependências e obrigações, --memória, ++ implementação);
+		-Aumenta obrigações(Acoplamento);
+		-E diminui o encapsulamento de OO
+	-Evitar classes muito sabidas;
+	-Criar um interface com o método desenhar que será implementada em cada classe;
+	-Segregação interface;
+
+GRASP - Indireção(Evitar acoplamento direto, ou seja, herança)->Reduzir acoplamento e pontos de mudança
+	-Criar um mediador
+	-Preciso do mediador para proporcionar um serviço para minha classe, esse serviço pode ser uma API
+	-Usar mapeamento, manipulação de valores usando endereço de memória(Ponteiro)
+	-Reduzir ponto de mudança, apenas o DAO muda
+	-Mediador(DAO) conhece o SQL
+	-Mediador conversa com alguém externo a mim, BD ou API
+	
+

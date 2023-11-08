@@ -1,0 +1,62 @@
+Coersão: Grau que suas responsabilidades formam uma unidade.
+    - Alta coersão = Responsabilidades a fim
+    - Baixa coersão = Responsabilidades desconectadas
+    Inversamente proporcinal ao número de responsabilidades distintas de cada módulo.
+    Processo iterstivo e incremental
+Tipos de coersão:
+    Coincidencia:
+        -Nenhuma coersão, apenas um agrupamento de responsabilidades.
+    Temporária(Evitar):
+        -Responsabilidades são acionadas em períodos ou frequência ou períodos semelhantes
+    Procedural(Usa com moderação):
+        -As responsabilidades são acionadas em ordem, mas não compatilham os dados
+    Comunicacional(Usar):
+        -Responsabilidades compatilham dados entre si.
+    Sequencial(Usar):
+        -Responsabilidades fornecem dados de saída e entrada.
+    Funcional(Supra Sumo):
+        -Apenas uma única funcionalidade
+
+Exercício(Segregação de interface)
+public interface GerenciarRelatorio(){
+    iniciaRelatorio();
+    formataRelatorio();
+    imprimeRelatorio();
+}
+public interface GerenciardadosGlobais{
+    iniciaDadosGlobais();
+    finalizaDadosGlobais();
+}
+Pode quebrar
+public interface GerenciarComando{
+    iniciaComando();
+    empilhaComando();
+    desempilhaComando();
+    finalizaPilhaComandos();
+}
+
+Acoplamento(Deve diminuir, ou seja, isolar os motivos de mudança):
+    Grau de dependência de uma classe em relação a outra
+    Baixo Acoplamento: Poucas dependências
+    Alto Acoplamento: Muitas dependências
+    Necessidade de mudança devido á dependência
+
+Tipos de Acoplamento:
+    Conteúdo(Pior):
+        -Quando uma classe conhece a estrutura interna da outra.
+    Dados/Recursos comuns concorrentes(Evitar):
+        -Variáveis globais são Muitas
+        -Dados compatilhados
+    Controle(Usar com moderação):
+        -Uma classe usa mensagens para controlar os dados ou comportamento da outra.
+        -Classe forca manda ordenar uma lista do banco de palavras.(Influencia)
+    Estrutura de dados(Usar):
+        -Módulo A passa uma estrutura de dados para o módulo B.
+        -Se ocorrer uma alteraçãona estrutura pode ser ruim.
+    Parâmetros e troca de mensagens(Supra Sumo):
+        -Dados passados são dados da própria linguagem, básicos ou primitivos.
+        Impossível ter ambos, no projeto queremos maximizar de cada pacote e diminuir a 
+        coersão entre pacotes
+Módulos possuem poucos mas bons amigos(Trade off):
+
+    

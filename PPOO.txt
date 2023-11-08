@@ -1,0 +1,12 @@
+PPOO - Responsabilidade única
+	-Nunca deve haver mais de um motivo para um método existir e mudar
+	-Cada responsabilidade é um eixo de mudança
+      	-Single Responsibility Principle(SRP)
+	-Princípio simples, mas difícil de fazer
+	-Identitifacar e separar problemas
+PPOO - Aberto-fechado
+	-Abertas para extensãoe fechar para modificação
+	-Mudar comportamento, override tem que adicionar coisas
+	-Programar uma interface para cada implementação
+	-Ruim: Usar classe concreta
+	-Bom: Usar abstração e interface, apenas implements, ou seja, assinatura do método. Tem que ser um substituto perfeito do pai

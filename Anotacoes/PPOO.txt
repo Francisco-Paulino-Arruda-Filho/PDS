@@ -1,0 +1,2 @@
+PPOO - Responsabilidade única
+	-Nunca deve haver mais de um motivo para um método existir e mudar

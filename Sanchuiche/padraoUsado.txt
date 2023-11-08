@@ -1,0 +1,1 @@
+Usar padrão decorator para construção do sanduíche
